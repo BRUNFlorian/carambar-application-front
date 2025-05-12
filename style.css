@@ -28,6 +28,7 @@ body {
   cursor: pointer;
   background-color: #e3097e;
   border: none;
+  z-index: 2;
 }
 
 .burger span {
@@ -43,11 +44,35 @@ body {
   height: 42px;
 }
 
+#search-field {
+  border-radius: var(--radius-xl);
+  border: 1px solid var(#e3097e);
+  height: 45px;
+  max-width: 100%;
+}
+
+#side-bar {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 500px; /* ou la hauteur souhaitée */
+  background-color: #011f5d;
+  padding: 60px 20px;
+  transition: top 0.8s ease;
+  z-index: 1;
+}
+
+#side-bar.active {
+  top: 0; /* Affichée */
+}
+
 ul {
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  margin-top: 50px;
+  gap: 25px;
   padding: 0;
 }
 
@@ -56,10 +81,6 @@ li a {
   color: #ffffff;
   font-size: 20px;
   font-weight: 700;
-}
-
-.menu {
-  margin: 40px 0px 0px 20px;
 }
 
 .arrow {
