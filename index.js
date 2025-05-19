@@ -7,7 +7,7 @@ const responseButton = document.querySelector(".response-button button");
 const jokeButton = document.querySelector(".joke-button button");
 
 // Récupérer les blagues
-fetch("http://localhost:3000/api/v1/jokes")
+fetch("https://jokes-application-back.onrender.com/")
   .then((response) => response.json())
   .then((data) => {
     jokes = data;
